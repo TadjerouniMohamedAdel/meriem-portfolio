@@ -1,0 +1,165 @@
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .exp-link img{
+    margin-bottom: 30px;
+  }
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: #0E2431;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  .timeline h3,.timelime h4{
+    color: 0E2431;
+  }
+  /* timeline-item around content */
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .right::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -7px;
+    background-color: #14A989;
+    border: 4px solid #14A989;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .timeline ul li{
+    margin-top: 20px;
+  }
+  .timeline .content .exp-link{
+      position: relative;
+      z-index: 20;
+      top:20px;
+      left:300px
+  }
+  @media(max-width:1100px){
+    .timeline .content .exp-link{
+      position: relative;
+      z-index: 20;
+      top:20px;
+      left:250px
+  }
+}
+@media(max-width:1020px){
+  .timeline .content .exp-link{
+    position: relative;
+    z-index: 20;
+    top:20px;
+    left:0px
+  }
+}
+  
+  .left::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: -3px;
+    background-color: #14A989;
+    border: 4px solid #14A989;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  
+  /* Place the timeline-item to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the timeline-item to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left timeline-item (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent  ;
+  }
+  
+  /* Add arrows to the right timeline-item (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent   transparent transparent;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 0px 30px;
+    padding-bottom: 30px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width timeline-items */
+    .timeline-item {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .timeline-item::before {
+      left: 60px;
+      border: medium solid  ;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent   transparent transparent;
+    }
+  
+    
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 24px;
+    }
+    
+  
+  /* Make all right timeline-items behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
