@@ -11,7 +11,7 @@ export default function Timeline() {
                     <h4>
                         Janvier2021 - en cours
                     </h4>
-                    <h3>Administratrices des ventes</h3>
+                    <h3>Chargé de clientèle</h3>
                     <ul>
                         <li>• fidéliser la clientèle, en lui prodiguant des conseils et des services personnalisés. atteindre les objectifs fixés par le directeur de l'agence.</li>
                         <li>• entretenir la relation avec la clientèle,  propser de services et de produits spécifiquement adaptés à celle-ci. réfléchir régulièrement à l'adaptation de ceux-ci, en fonction des retours émis par les utilisateurs, et des évolutions du marché concurrentiel.</li>
